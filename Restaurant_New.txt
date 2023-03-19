@@ -1,0 +1,425 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int orders; /// For selecting the order number
+    int no_deals; /// For selecting the number of deals
+    int val; /// Giving value for takeaway
+    int tno; /// For takeaway no 
+    double changeDue; /// Change left after giving the total bill 
+    float amtchg; /// Giving the money
+    float bill; /// For calculating the bill
+    float gst; /// For calculating Gst on the bill
+    float service_charge; /// For calculating Service charge on the bill
+    float tip; /// Giving tip for donation
+    float delivery_charge; /// For calculating Delivery charges 
+    float total_bill; /// For calculating total bill
+    float final_bill; /// Calculating Final Bill after tip and Delivry Charges
+    char tp; /// Asking the user to giving the tip
+    string address; /// For taking address from the user
+    string review; /// Review about the hotel
+    char payment; /// For online or Cash on delivery 
+    int choice; /// For entering a choice between Online mode of Transactions and Cash on Delivery
+    long account_no; /// For Entering Account no
+    int  cvv; /// For asking the cvv from the user
+    int  otp; /// For asking the otp from the user
+    int pin; /// For asking the pin from the user
+    string expiry_date; /// For asking the expiry date from the user
+    float contact_no; /// For asking the Contact Number from the user
+    float amount; /// For asking the Amount to be given from the user
+    char vehicle; /// To ask the user whether he has a vehicle or no
+    char type_of_vehicle; /// To ask the user whether he has a bike or a car
+    double parking_charges; /// To calculate the parking charges
+    
+    /// Giving Menu
+    cout<<"-------------------- MENU -----------------------"<<endl;
+    cout<<endl;
+    cout<<"(1) Coffee                       Rs 25 only." <<endl;
+    cout<<"(2) Tea                          Rs 10 only." <<endl;
+    cout<<"(3) Vada Pav                     Rs 20 only." <<endl;
+    cout<<"(4) Samosa                       Rs 25 only." <<endl;
+    cout<<"(5) Pani Puri                    Rs 50 only." <<endl;
+    cout<<"(6) Margerita Pizza              Rs 150 only." <<endl;
+    cout<<"(7) Spring Roll                  Rs 210 only." <<endl;
+    cout<<"(8) Triple Schezwan Rice         Rs 230 only." <<endl;
+    cout<<"(9) Schezwan Burger              Rs 130 only." <<endl;
+    cout<<"(10) Peri Peri Fries             Rs 50 only." <<endl;
+    cout<<"(11) Masala Pav                  Rs 80 only." <<endl;
+    cout<<"(12) Tandoori Sandwich           Rs 120 only." <<endl;
+    cout<<"(13) Schezwan Fried Rice         Rs 235 only." <<endl;
+    cout<<"(14) Veg Crispy                  Rs 205 only." <<endl;
+    cout<<"(15) Noodles                     Rs 75 only." <<endl;
+    cout<<endl;
+    cout<<"---------------- END OF MENU -----------------"<<endl;
+    cout<<endl;
+    cout<<"---------------- Welcome to TANAY'S RESTAURANT ----------------"<<endl;
+    cout<<endl;
+
+    cout<<"Please browse through the above menu and give order"<<endl;
+    cout<<"Enter 1 for Coffee"<<endl;
+    cout<<"Enter 2 for Tea"<<endl;
+    cout<<"Enter 3 for Vada Pav"<<endl;
+    cout<<"Enter 4 for Samosa"<<endl;
+    cout<<"Enter 5 for Pani Puri"<<endl;
+    cout<<"Enter 6 for Margerita Pizza  "<<endl;
+    cout<<"Enter 7 for Spring Roll "<<endl;
+    cout<<"Enter 8 for Triple Schezwan Rice  "<<endl;
+    cout<<"Enter 9 for Schezwan Burger "<<endl;
+    cout<<"Enter 10 for Peri Peri Fries"<<endl;
+    cout<<"Enter 11 for Masala Pav "<<endl;
+    cout<<"Enter 12 for Tandoori Sandwich  "<<endl;
+    cout<<"Enter 13 for Schezwan Fried Rice "<<endl;
+    cout<<"Enter 14 for Veg Crispy "<<endl;
+    cout<<"Enter 15 for Noodles"<<endl;
+    cout<<endl;
+    cout<<"Please select the order number :" <<endl;
+    cin>>orders;
+    cout<<"Please select the number of deals : " <<endl;
+    cin>>no_deals;
+    cout<<endl;
+
+    /// Switch Case Calculations
+     switch(orders)
+    {
+         case 1:
+                 cout<<"Order: Coffee " <<endl;
+                 cout<<"Number of Deals: " <<no_deals<<endl;
+                 cout<<"Price of each deal: Rs 25" <<endl;
+                 bill = 25*no_deals;
+                 cout<<endl;
+                 break;
+
+         case 2:
+                 cout<<"Order: Tea " <<endl;
+                 cout<<"Number of Deals: " <<no_deals<<endl;
+                 cout<<"Price of each deal: Rs 10" <<endl;
+                 bill = 10*no_deals;
+                 cout<<endl;
+                 break;
+
+         case 3:
+                 cout<<"Order: Vada Pav " <<endl;
+                 cout<<"Number of Deals: " <<no_deals<<endl;
+                 cout<<"Price of each deal: Rs 20" <<endl;
+                 bill = 20*no_deals;
+                 cout<<endl;
+                 break;
+
+         case 4:
+                 cout<<"Order: Samaosa " <<endl;
+                 cout<<"Number of Deals:"  <<no_deals<<endl;
+                 cout<<"Price of each deal: Rs 25" <<endl;
+                 bill = 25*no_deals;
+                 cout<<endl;
+                 break;
+
+         case 5:
+                 cout<<"Order: Pani Puri " <<endl;
+                 cout<<"Number of Deals: " <<no_deals<<endl;
+                 cout<<"Price of each deal: Rs 50" <<endl;
+                 bill = 50*no_deals;
+                 cout<<endl;
+                 break;
+        
+        case 6:
+                 cout<<"Order: Margerita Pizza   " <<endl;
+                 cout<<"Number of Deals: " <<no_deals<<endl;
+                 cout<<"Price of each deal: Rs 150" <<endl;
+                 bill = 150*no_deals;
+                 cout<<endl;
+                 break;
+                 
+        case 7:
+                 cout<<"Order: Spring Roll  " <<endl;
+                 cout<<"Number of Deals: " <<no_deals<<endl;
+                 cout<<"Price of each deal: Rs 210" <<endl;
+                 bill = 210*no_deals;
+                 cout<<endl;
+                 break;
+        
+        case 8:
+                 cout<<"Order: Triple Schezwan Rice  " <<endl;
+                 cout<<"Number of Deals: " <<no_deals<<endl;
+                 cout<<"Price of each deal: Rs 230" <<endl;
+                 bill = 230*no_deals;
+                 cout<<endl;
+                 break;        
+               
+        case 9:
+                 cout<<"Order: Schezwan Burger " <<endl;
+                 cout<<"Number of Deals: " <<no_deals<<endl;
+                 cout<<"Price of each deal: Rs 130" <<endl;
+                 bill = 130*no_deals;
+                 cout<<endl;
+                 break;   
+                
+        case 10:
+                 cout<<"Order: Peri Peri Fries " <<endl;
+                 cout<<"Number of Deals: " <<no_deals<<endl;
+                 cout<<"Price of each deal: Rs 50" <<endl;
+                 bill = 50*no_deals;
+                 cout<<endl;
+                 break;
+                 
+        case 11:
+                 cout<<"Order: Masala Pav " <<endl;
+                 cout<<"Number of Deals: " <<no_deals<<endl;
+                 cout<<"Price of each deal: Rs 80" <<endl;
+                 bill = 80*no_deals;
+                 cout<<endl;
+                 break;
+                 
+        case 12:
+                 cout<<"Order: Tandoori Sandwich " <<endl;
+                 cout<<"Number of Deals: " <<no_deals<<endl;
+                 cout<<"Price of each deal: Rs 120" <<endl;
+                 bill = 120*no_deals;
+                 cout<<endl;
+                 break;   
+        
+        case 13:
+                 cout<<"Order: Schezwan Fried Rice " <<endl;
+                 cout<<"Number of Deals: " <<no_deals<<endl;
+                 cout<<"Price of each deal: Rs 235" <<endl;
+                 bill = 235*no_deals;
+                 cout<<endl;
+                 break;
+                 
+        case 14:
+                 cout<<"Order: Veg Crispy " <<endl;
+                 cout<<"Number of Deals: " <<no_deals<<endl;
+                 cout<<"Price of each deal: Rs 205" <<endl;
+                 bill = 205*no_deals;
+                 cout<<endl;
+                 break;
+                 
+        case 15:
+                 cout<<"Order: Noodles " <<endl;
+                 cout<<"Number of Deals: " <<no_deals<<endl;
+                 cout<<"Price of each deal: Rs 75" <<endl;
+                 bill = 75*no_deals;
+                 cout<<endl;
+                 break;  
+                 
+         default:
+                    cout<<"Invalid Output. "<<endl;
+                    break;
+    }
+
+    /// Calculating GST
+    gst=(7.5/100.0)* bill;
+
+    ///Calculating Service Charge
+    service_charge = (10.0/100.0) * bill;
+
+    /// Calculating Total Bill
+    total_bill= gst + service_charge + bill;
+
+    /// Asking the user for takeaway 
+    cout<<"Would you like to have it at the Restaurant, Takeaway your parcel or Home delivery?"<<endl;
+    cout<<"Enter 1 for Having at the Restaurant "<<endl;
+    cout<<"Enter 2 for Takeaway "<<endl;
+    cout<<"Enter 3 for Home Delivery "<<endl;
+    cin>>val;
+    
+    /// Calculations for Table Number 
+    if(val == 1)
+    {
+        cout<<"Welcome"<<endl;
+        
+        cout<<endl;
+        
+        cout<<"Please enter your table number:" <<endl;
+        cin>>tno;
+        cout<<"Your order will be at table number " << tno << " soon!"<<endl;
+        delivery_charge = total_bill * (0.00/100.0);
+        
+        cout<<"Do you have an vehicle, enter y/Y, n/N: "<<endl;
+        cin>>vehicle;
+        
+        if(vehicle == 'y' || vehicle == 'Y')
+        {
+            cout<<"Do you have a Car(c/C) or a Bike(b/B): "<<endl;
+            cin>>type_of_vehicle;
+            
+            switch(type_of_vehicle)
+            {
+                case 'c':
+                case 'C':
+                {
+                    parking_charges = total_bill * (3.5/100.0);
+                    cout<<"You can park your Car here "<<endl;
+                    cout<<"THANK YOU!! "<<endl;
+                    
+                    break;
+                }
+                
+                case 'b':
+                case 'B':
+                {
+                    parking_charges = total_bill * (2.35/100.0);
+                    cout<<"You can park your Bike here "<<endl;
+                    cout<<"THANK YOU!! "<<endl;
+                    
+                    break;
+                }
+                
+                default:
+                {
+                    cout<<"You have entered wrong data: "<<endl;
+                    break;
+                }
+            }
+        }
+        else if(vehicle == 'n' || vehicle == 'N')
+        {
+            cout<<"Okay. THANK YOU!!"<<endl;
+            parking_charges = total_bill * 0;
+        }
+        else
+        {
+            cout<<"Invalid Output "<<endl;
+            parking_charges = total_bill * 0;
+        }
+    }
+    
+    /// Calculation for Takeaway
+    else if(val == 2)
+    {
+        cout<<endl;
+        cout<<"Your takeaway will be ready soon \n";
+        delivery_charge = total_bill * (0.00/100.0);
+        parking_charges = total_bill * (0.00/100.0);
+    }
+    
+    /// Calculation for Home Delivery
+    else if(val == 3)
+    {
+        cout<<"Please enter your address: \n";
+        cin>>address;
+        delivery_charge = total_bill * (5.0/100.0);
+        parking_charges = total_bill * (0.00/100.0);
+        cout<<"Your Home delivery will soon be reached at your doorstep \n"<<endl;
+    }
+    else 
+    {
+        delivery_charge = total_bill * (0.00/100.0);
+        parking_charges = total_bill * (0.00/100.0);
+        cout<<"Invalid Output \n";
+    }
+
+    /// Asking for Tip
+    cout<<"Do you want to give tip:"<<endl;
+    cout<<"Enter y or Y for Yes"<<endl;
+    cout<<"Enter n or N for No"<<endl;
+    cin>>tp;
+    /// Calculating Tip
+    if(tp == 'y' || tp == 'Y')
+    {
+        tip= total_bill * (20.0/100.0);
+        cout<<"Thanks for the tip"<<endl;
+
+    }
+    else if (tp == 'n' || tp == 'N')
+    {
+        cout<<"Okay. Thank you"<<endl;
+        tip= total_bill * (0.0/100.0);
+    }
+    else
+    {
+        cout<<"Invalid Output "<<endl;
+        tip= total_bill * (0.0/100.0);
+    }
+     
+    cout<<endl;
+
+    cout<<"Price: Rs "<<bill<<" "<<endl;
+    cout<<"GST: Rs "<<gst<<endl;
+    cout<<"Service Charge: Rs "<<service_charge<<endl;
+    cout<<"Delivery Charges: Rs "<<delivery_charge<<endl;
+    cout<<"Parking Charges: Rs "<<parking_charges<<endl;
+    cout<<"Tip: Rs "<<tip<<endl;
+    final_bill = total_bill + tip + delivery_charge + parking_charges;
+    cout<<"Final Bill: Rs "<<final_bill<<endl;
+    cout<<endl;
+    
+    cout<<"Do you want to pay Online or Cash ?"<<endl;
+    cout<<"Enter 'o' or 'O' to pay money Online and 'c' or 'C' to pay money through Cash."<<endl;
+    cin>> payment;
+    
+    if (payment == 'o' || payment == 'O')
+    {
+        cout<<"How do you want to give your online payment"<<endl;
+        cout<<"1. Credit Card / Debit Card. "<<endl;
+        cout<<"2. UPI/ G Pay/ PayTM (Mobile Transactions)."<<endl;
+        cout<<"Enter your choice:"<<endl;
+        cin>>choice;
+        
+        switch(choice)
+        {
+            case 1:
+                    cout<<"Enter your Acount No: "<<endl;
+                    cin>>account_no;
+                    cout<<"Enter Cvv: "<<endl;
+                    cin>>cvv;
+                    cout<<"Enter Expiry Date: "<<endl;
+                    cin>>expiry_date;
+                    cout<<"Enter a amount: "<<endl;
+                    cin>>amount;
+                    cout<<"Enter OTP: "<<endl;
+                    cin>>otp;
+                    break;
+            case 2:
+                    cout<<"Enter a contact no to tranfer money: "<<endl;
+                    cin>>contact_no;
+                    cout<<"Enter a amount: "<<endl;
+                    cin>>amount;
+                    cout<<"Enter your Pin: "<<endl;
+                    cin>>pin;
+                    break;
+            
+            default:
+                    cout<<"You have entered wrong no"<<endl;
+                    break;
+            
+        }
+    }
+    else if (payment == 'c' || payment == 'C')
+    {
+        cout<<"The cash will be collected at the time when bill is given. "<<endl;
+        cout << "Enter ammount you have given: Rs ";
+        cin >> amount;
+    }
+    
+    else 
+    {
+        cout<<"Invalid output"<<endl;
+    }
+    
+        changeDue = amount - final_bill;
+    
+        if(final_bill < amount)
+        {
+            cout<<"Change Due: Rs " << changeDue <<endl;
+        }
+        else if(final_bill > amount && total_bill>=0)
+        {
+            cout<<"Amount paid is not enough to cover bill"<<endl;
+        }
+        else if (final_bill == amount)
+        {
+            cout<<"You have paid exact value"<<endl;
+        }
+        else
+        {
+            cout<<"Invalid Output"<<endl;
+        }
+    cout<<endl;
+    
+    cout<<"Please leave a positive review: \n";
+    cin>>review;
+    cout<<endl;
+    cout<<"--------------- THANK YOU FOR COMING TO TANAY'S RESTAURANT ---------------"<<endl;
+    cout<<endl;
+}
